@@ -12,6 +12,11 @@ Sin3 =0.003538  		78Hz
 Colored Noise = 0.15 to 0.18
 
 These frequencies are filtered out from the given signal using band stop filters, designed at desirable cut off frequencies. The cutoff frequencies are chosen depending on the frequencies obtained from the spectrum. The order is found by trial and error method with which unwanted components are zeroed. The order of filters in this project is high. Higher order filters are very expensive and are very complicated to design in real world. The order of filter in this project is taken high to make signal free of noise but it is not advisable when it comes to real world. The order of filter introduces delays in the signal which shifts it.  For this, the minimum order that has the least impact on the shift without compromising the filter specifications is chosen. As there are four frequency components which are needed to be removed from the provided audio signal, four filters are designed. The table below shows the chosen values of cutoff frequencies and order 
+Filter	Noise Signal	WN1	WN2	Order of Filter
+h1	Sin1	0.050	0.052	5000
+h2	Colored Noise	0.14	0.2	1000
+h3	Sin2	0.0044	0.0055	10000
+h4	Sin3	0.003	0.004	10000
 
 First the signal is passed to filter1 and the output of first filter is given to second filter as input. The output of second filter is split into two and each part is filtered by sending it into different filters. The obtained output from these filters is joined back to one signal which is free of noise. Delays and shifts in signal results in loss of some signal. Even though maximum effort is put in to avoid the loss of samples, there is loss of a few samples which is unavoidable.
 
