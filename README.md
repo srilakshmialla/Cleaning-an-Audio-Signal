@@ -25,7 +25,5 @@ First the signal is passed to filter1 and the output of first filter is given to
 Finally, the cleaned audio signal is saved in .wav format 
 
 
-# Conclusion:
+# Conclusion
 	In conclusion, this project helps in learning how to use FFT to know all frequency components in a signal and how to design a fir filter which eliminates undesired frequency components in an audio signal that is corrupted by noise. In process of reaching to a cleaned signal many Matlab techniques are applied and learned. The spectrums of noisy and cleaned signal concludes that provided signal is cleaned.
-
-
